@@ -25,7 +25,7 @@ Targets are starting points. Revise after Week 4 once there is a baseline.
 ## 4. Non-Goals
 
 - No medical advice, diagnosis, or treatment. Anything beyond my sources, or any pain, injury, or concerning symptom, results in a "check with a professional" message.
-- No second project in the meantime.
+- No second project (French tutor, reflection journal, etc.) until Week 12 is complete.
 - No model training or fine-tuning. The system uses an existing LLM, grounded in curated sources and my own data.
 - No multi-user features, accounts, or app polish.
 - No automatic purchases, messages to others, or actions outside my own calendar and logs.
@@ -51,7 +51,11 @@ Targets are starting points. Revise after Week 4 once there is a baseline.
 - **Memory:** A structured store (SQLite) for logs and plans, not free-text chat history
 - **Retrieval:** Chunked source documents with citations carried through to the output
 - **Schedule:** A weekly run (Sunday) that drafts the next plan, plus on-demand updates after logging
-- **Guardrails:** Progression caps (limits on weekly load increases), deload rules, and a safety check that routes concerning input to "see a professional"
+- **Guardrails:** Progression caps (limits on weekly load increases, with larger-muscle compound lifts progressed first when a workout is rated easy), deload rules, and a four-tier safety check on reported symptoms:
+  - **Tier 1, normal soreness:** Rest day or lighter session. No referral.
+  - **Tier 2, mild or short-lived ache:** Reduce or swap the affected movement, monitor, and refer if it persists or worsens.
+  - **Tier 3, sharp, persistent, or rest-time pain:** Stop loading the area and consult a professional. No diagnosis or treatment advice.
+  - **Tier 4, red flags (dizziness, chest tightness, fainting):** Stop and seek medical care.
 - **Local-first:** Real data stays on my machine. Model choice (hosted vs. local) is a documented decision; revisit if privacy needs change.
 
 ## 7. Evaluation Plan
@@ -89,7 +93,6 @@ Follows the 12-week study roadmap.
 ## 10. Open Questions
 
 - Hosted model or local model for the final version?
-- Integrate WHOOP data
 - Which calendar and which logging interface (CLI, chat, or a simple form)?
 - Do I include cycle phase tracking, and what are the privacy implications?
 - What is my real baseline for "doable" plans?
@@ -99,3 +102,7 @@ Follows the 12-week study roadmap.
 Add dated entries as the design changes.
 
 - 2026-11-06: Chose the strength and fueling coach as the single agent project.
+- 2026-11-06: Wearable data (for example WHOOP) deferred as an optional later extension. v1 uses manual logging to keep scope small.
+- 2026-11-08: Drafted an initial evaluation scenario set (`evals/scenarios.md`) before implementation, so the first version can be tested against a baseline.
+- 2026-11-08: Added a four-tier safety check to the guardrails (normal soreness, mild ache, sharp or persistent pain, red flags) to separate "rest day" from "consult a professional."
+- 2026-11-08: When a workout is rated easy, progression starts with larger-muscle compound lifts and stays within the weekly progression cap.
