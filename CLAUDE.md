@@ -47,3 +47,7 @@ Real training/health data lives only in `data/` (gitignored) and must never be c
 
 - Record design changes as dated entries in the Decision Log in `docs/proposal.md`.
 - Respect the non-goals: no multi-user features, accounts, app polish, or second project before Week 12.
+
+## Git workflow
+
+Single-developer repo. Small, low-risk changes (docs, typos, setup, Decision Log entries) are committed directly to `main`. Code changes, and anything that alters agent behavior (prompts, retrieval, tools, guardrails), go on a feature or experiment branch and merge via pull request, so `main` stays working and each change can be compared against the eval scenarios before merging.
