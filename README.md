@@ -24,7 +24,7 @@ When I log a missed or hard session, the next plan adjusts. Every recommendation
 - Give medical advice. Pain, injury, or concerning symptoms get a "check with a professional" response.
 - Train or fine-tune a model.
 - Support multiple users.
-See [PROPOSAL.md](PROPOSAL.md) for the full scope, success criteria, evaluation plan, and risks.
+See [docs/proposal.md](docs/proposal.md) for the full scope, success criteria, evaluation plan, and risks.
  
 ## Roadmap
  
@@ -44,7 +44,7 @@ Possible later extension: wearable data (for example WHOOP) as an additional inp
 ```
 .
 ├── README.md
-├── PROPOSAL.md
+├── docs/proposal.md
 ├── data/          # real logs, gitignored, never committed
 ├── sample_data/   # synthetic examples for testing and demos
 ├── sources/       # curated source library (metadata only if licensing requires)
